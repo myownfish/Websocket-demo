@@ -1,0 +1,17 @@
+<html>
+    <head> 
+        <script src="./websocket-client.js"></script>
+        <script type="text/javascript">
+           function sendToServer(){
+           
+          
+               ws.send(document.getElementById("inputtext").value);
+           }
+        
+        </script>
+    </head>
+    <body>
+        <input name="inputtext" id="inputtext"/>
+        <button onclick="sendToServer()"> Send </button>
+    </body>
+</html>
