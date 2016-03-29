@@ -6,9 +6,9 @@ websocket.listen(9999, "localhost", function(conn) {
     console.log("connection opened");
     connectionArray.push(conn);
     
-    conn.on("data", function(opcode, data){
+    conn.on("data", function(opcode, data) {
         console.log("message:", data);
-        for(i in connectionArray){
+        for (i in connectionArray) {
             connectionArray[i].send(data);
         }
         
